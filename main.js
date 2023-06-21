@@ -1,14 +1,19 @@
 const Insta = require('@androz2091/insta.js');
 const client = new Insta.Client();
 
-client.on('connect', () => {
-  console.log(`Logged in as ${client.user.username}!`);
+client.on('connected', async () => {
+    console.log(`${client.user.username} Is Ready Now For Chats`);
+    client.on('pendingRequest', async data => {
+      try{
+        client.on('messageCreate', msg => {
+            if (msg.content === 'ping') {
+              msg.reply('Pong!');
+            }
+          });
+      }catch(err){}
+    });
 });
 
-client.on('messageCreate', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('Pong!');
-  }
-});
+
 
 client.login('zizifa_2001', 'mumu1379');
