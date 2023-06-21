@@ -7,10 +7,7 @@ client.on('connected', () => {
 
 
 client.on('messageCreate', message => {
-    
-    if (message.content === 'ping') {
-        message.reply(message)
-    }
+    message.createMessageCollector(message)
 })
 
 client.login('zizifa_2001', 'mumu1379');
