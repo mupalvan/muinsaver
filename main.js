@@ -22,7 +22,7 @@ client.on('connected', () => {
 
 
 client.on('messageCreate', message => {
-    message.reply(message.chaID)
+    message.reply(message.chat)
 })
 
 client.login('zizifa_2001', 'mumu1379');
