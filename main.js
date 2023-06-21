@@ -7,8 +7,9 @@ client.on('connected', () => {
 
 
 client.on('messageCreate', message => {
+    
     if (message.content === 'ping') {
-        message.reply('pong')
+        message.reply(message)
     }
 })
 
