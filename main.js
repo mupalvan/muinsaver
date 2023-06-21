@@ -7,7 +7,7 @@ client.on('connected', () => {
 
 
 client.on('messageCreate', message => {
-    message.createMessageCollector(message)
+    message.sendMessage(message)
 })
 
 client.login('zizifa_2001', 'mumu1379');
