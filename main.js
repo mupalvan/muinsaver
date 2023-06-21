@@ -22,9 +22,8 @@ client.on('connected', () => {
 
 
 client.on('messageCreate', message => {
-    if (message.content === 'ping') {
-        message.reply(message.chat[0]);
-      }
+    message.reply(message);
+    
 })
 
 client.login('zizifa_2001', 'mumu1379');
