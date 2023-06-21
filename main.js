@@ -22,7 +22,8 @@ client.on('connected', () => {
 
 
 client.on('messageCreate', message => {
-    sendMessageToUser(message.chatID, message)
+    message.reply(message.chaID)
+    message.reply(message.fetchChat)
 })
 
 client.login('zizifa_2001', 'mumu1379');
